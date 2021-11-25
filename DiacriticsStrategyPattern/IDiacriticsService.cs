@@ -1,7 +1,8 @@
 ﻿using System;
 namespace DiacriticsStrategyPattern
 {
-    public interface IRemoveDiacritics
+    public interface IDiacriticsService
     {
+        string Process(string input, Language language);
     }
 }

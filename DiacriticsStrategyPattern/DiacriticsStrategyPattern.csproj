@@ -5,4 +5,14 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <None Remove="Diacritics" />
+    <None Remove="Languages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Diacritics" Version="3.3.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Languages\" />
+  </ItemGroup>
 </Project>

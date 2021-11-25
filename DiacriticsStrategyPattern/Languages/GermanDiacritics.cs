@@ -1,10 +1,18 @@
-﻿using System;
-namespace DiacriticsStrategyPattern
+﻿using Diacritics;
+using Diacritics.AccentMappings;
+
+namespace DiacriticsStrategyPattern.Languages
 {
-    public class GermanDiacritics
+    public class GermanDiacritics: ILanguageDiacritics
     {
-        public GermanDiacritics()
+        public Language Language => Language.DE;
+
+        public string Process(string input)
         {
+            var mapper = new DiacriticsMapper(new GermanAccentsMapping());
+
+            var options = new DiacriticsOptions { Decompose = true };
+            return mapper.RemoveDiacritics(input, options);
         }
     }
 }

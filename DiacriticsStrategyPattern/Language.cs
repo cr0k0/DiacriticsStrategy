@@ -1,7 +1,10 @@
 ﻿using System;
 namespace DiacriticsStrategyPattern
 {
-    public enum Languages
+    public enum Language
     {
+        DE,
+        ES,
+        PT
     }
 }
